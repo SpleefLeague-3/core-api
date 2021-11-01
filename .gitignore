@@ -1,14 +1,24 @@
 # Compiled class file
+target/
 *.class
 
 # Log file
 *.log
+
+# Script files
+*.bat
+
+# Generated files
+dependency-reduced-pom.xml
 
 # BlueJ files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# IntelliJ workspace files
+.idea/
 
 # Package Files #
 *.jar
