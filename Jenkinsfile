@@ -10,7 +10,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh "rm ./target/original*"
-                sh "scp -i ~/.ssh/id_rsa ./target/*.jar"
+                sh "scp -i ~/.ssh/id_rsa ./target/*.jar spleefleague@live.spleef.gg"
             }
         }
     }
