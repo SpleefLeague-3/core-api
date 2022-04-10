@@ -7,6 +7,11 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'pwd'
+            }
+        }
     }
 
 }
