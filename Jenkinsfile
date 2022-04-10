@@ -3,13 +3,9 @@ pipeline {
 
     stages {
         stage('Build') {
-
-        }
-        stage('Test') {
-
-        }
-        stage('Deploy') {
-
+            steps {
+                mvn clean install
+            }
         }
     }
 
