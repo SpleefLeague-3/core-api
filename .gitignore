@@ -4,6 +4,10 @@ target/
 
 # Log file
 *.log
+*.html
+img/
+css/
+js/
 
 # Script files
 *.bat
