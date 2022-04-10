@@ -115,7 +115,7 @@ public class Leaderboard extends DBEntity {
      *
      * @return Millis Created Time
      */
-    public long getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
