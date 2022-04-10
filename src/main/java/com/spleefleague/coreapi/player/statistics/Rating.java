@@ -36,10 +36,10 @@ public class Rating extends DBEntity {
         BRONZE3(   "Bronze III",   ChatColor.DARK_RED + "",     0,    700,  0),
         UNRANKED(  "Unranked",      ChatColor.YELLOW + "",      -1,    -1,  0);
 
-        protected String displayName;
-        protected String scorePrefix;
-        protected int lower, upper;
-        protected int decay;
+        private final String displayName;
+        private final String scorePrefix;
+        private final int lower, upper;
+        private final int decay;
 
         Division(String displayName, String scorePrefix, int lower, int upper, int decay) {
             this.displayName = displayName;
@@ -142,6 +142,10 @@ public class Rating extends DBEntity {
         return division;
     }
 
+    /**
+     * This was to fix an issue where player ratings in Multi* gamemodes were adding/subtracting backwards
+     */
+    @Deprecated
     public void flip() {
         int prev = wins;
         wins = losses;
