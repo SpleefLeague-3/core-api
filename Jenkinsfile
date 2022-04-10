@@ -10,6 +10,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'pwd'
+                sh 'scp -i ~/.ssh/id_rsa ./target/${env.POM_ARTIFACTID}.jar'
             }
         }
     }
