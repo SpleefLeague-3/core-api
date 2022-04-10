@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        IMAGE = readMavenPom().getArtifactId()
-        VERSION = readMavenPom().getVersion()
-    }
-
     stages {
         stage('Build') {
             steps {
@@ -14,8 +9,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "echo ${IMAGE} ${VERSION}"
-                sh "scp -i ~/.ssh/id_rsa ./target/${IMAGE}.jar"
+                sh "rm ./target/original*"
+                sh "scp -i ~/.ssh/id_rsa ./target/*.jar"
             }
         }
     }
