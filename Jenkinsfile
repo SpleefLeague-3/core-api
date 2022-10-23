@@ -9,9 +9,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "mkdir -p /mnt/plugins/${env.BRANCH_NAME}"
+                sh "mkdir -p /mnt/jenkins/${env.BRANCH_NAME}"
                 sh "rm ./target/original*"
-                sh "scp -i ~/.ssh/id_rsa ./target/*.jar /mnt/plugins/${env.BRANCH_NAME}/"
+                sh "scp -i ~/.ssh/id_rsa ./target/*.jar /mnt/jenkins/${env.BRANCH_NAME}/"
             }
         }
     }
