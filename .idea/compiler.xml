@@ -11,7 +11,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Core" target="1.8" />
-      <module name="CoreAPI" target="1.8" />
+      <module name="core-api" target="17" />
+      <module name="CoreAPI" target="17" />
       <module name="CoreZones" target="1.8" />
       <module name="game-spleef" target="1.8" />
       <module name="game-splegg" target="1.8" />
