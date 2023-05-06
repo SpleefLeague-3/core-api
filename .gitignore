@@ -22,7 +22,9 @@ dependency-reduced-pom.xml
 .mtj.tmp/
 
 # IntelliJ workspace files
-.idea/
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf/
 
 # Package Files #
 *.jar
